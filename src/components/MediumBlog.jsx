@@ -1,4 +1,3 @@
-// src/components/MediumBlog.jsx
 import React, { useEffect, useState } from "react";
 
 const MediumBlog = () => {

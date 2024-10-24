@@ -46,15 +46,19 @@ const BudgetApp = () => {
       <div className="flex justify-between mb-6">
         <div className="text-center">
           <h3 className="text-xl font-semibold text-green-600">Income</h3>
-          <p className="text-2xl font-bold">${totalIncome.toFixed(2)}</p>
+          <p className="text-2xl text-black font-bold">
+            ${totalIncome.toFixed(2)}
+          </p>
         </div>
         <div className="text-center">
           <h3 className="text-xl font-semibold text-red-600">Expenses</h3>
-          <p className="text-2xl font-bold">${totalExpense.toFixed(2)}</p>
+          <p className="text-2xl text-black font-bold">
+            ${totalExpense.toFixed(2)}
+          </p>
         </div>
         <div className="text-center">
           <h3 className="text-xl font-semibold text-gray-800">Balance</h3>
-          <p className="text-2xl font-bold">${balance.toFixed(2)}</p>
+          <p className="text-2xl text-black font-bold">${balance.toFixed(2)}</p>
         </div>
       </div>
 
@@ -65,7 +69,7 @@ const BudgetApp = () => {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full text-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             placeholder="Enter description"
             required
           />
@@ -76,7 +80,7 @@ const BudgetApp = () => {
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full text-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             placeholder="Enter amount"
             required
           />
@@ -86,7 +90,7 @@ const BudgetApp = () => {
           <select
             value={type}
             onChange={(e) => setType(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full text-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="income">Income</option>
             <option value="expense">Expense</option>

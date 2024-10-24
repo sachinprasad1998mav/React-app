@@ -66,7 +66,7 @@ const MediumBlog = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="bg-gray-100 text-black p-4 rounded-md">
+    <div className="mt-5 mb-10 bg-gray-100 text-black p-4 rounded-md">
       {blog && (
         <>
           <h1 className="font-bold text-4xl">{blog.title}</h1>

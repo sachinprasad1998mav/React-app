@@ -73,7 +73,7 @@ const StockData = () => {
   }, []);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="mt-5 mb-10 bg-white p-6 rounded-lg shadow-md">
       <h3 className="text-3xl font-bold mb-4 text-gray-800">Stock Update</h3>
       {loading ? (
         <p className="text-gray-600">Loading stock data...</p>

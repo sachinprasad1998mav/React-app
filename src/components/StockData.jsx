@@ -4,7 +4,19 @@ import axios from "axios";
 const StockData = () => {
   const [stockData, setStockData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const stockSymbols = ["MSFT", "AAPL", "GOOGL"]; // Example symbols
+  const stockSymbols = [
+    "MSFT",
+    "AAPL",
+    "GOOGL",
+    "AMZN",
+    "TSLA",
+    "NFLX",
+    "FB",
+    "NVDA",
+    "BABA",
+    "INTC",
+  ];
+  const API_KEY = process.env.REACT_APP_STOCK_API_KEY;
 
   useEffect(() => {
     const fetchAllStockData = async () => {
@@ -28,7 +40,7 @@ const StockData = () => {
         const fetchedData = await Promise.all(
           stockSymbols.map(async (symbol) => {
             const response = await axios.get(
-              `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=YOUR_API_KEY`
+              `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${API_KEY}`
             );
             if (response.data["Time Series (Daily)"]) {
               const latestData =

@@ -8,10 +8,10 @@ import StockData from "./components/StockData";
 const App = () => {
   return (
     <Router>
-      <div className="App min-h-screen bg-gray-900 text-white">
+      <div className="App min-h-screen bg-orange-200 text-white">
         <nav className="p-4 bg-gray-800">
           <Link className="mr-4" to="/">
-            Home
+            Finance App
           </Link>
           <Link className="mr-4" to="/blog">
             Blog API
